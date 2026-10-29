@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Interactive Card Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">DOM EVENTS ASSIGNMENT</p>
+      <h1>Live Interactive Card Builder</h1>
+      <p class="subtitle">Create, preview, and manage your cards in real time.</p>
+    </header>
+
+    <section class="builder panel">
+      <h2>Create a card</h2>
+      <div class="form-group">
+        <label for="title-input">Card title</label>
+        <input type="text" id="title-input" placeholder="Start typing a title..." autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="category-select">Category</label>
+        <select id="category-select">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="urgent">Urgent</option>
+        </select>
+      </div>
+
+      <h3 class="preview-heading">Live preview</h3>
+      <div id="preview-card" class="preview-box personal">
+        <h3 id="preview-title">Your Title Here</h3>
+        <p id="preview-category">Category: personal</p>
+      </div>
+      <button id="add-btn" class="primary-btn" type="button">+ Add Card</button>
+    </section>
+
+    <section class="saved panel">
+      <div class="saved-header">
+        <div>
+          <h2>Saved cards</h2>
+          <p class="muted">Your created cards will appear here.</p>
+        </div>
+        <span id="card-count" class="count">0 cards</span>
+      </div>
+      <div id="card-list" class="card-list">
+        <p id="empty-state" class="empty-state">No cards yet. Create your first one!</p>
+      </div>
+    </section>
+    <footer>Built with HTML, CSS &amp; JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
